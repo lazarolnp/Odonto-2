@@ -530,54 +530,20 @@ h1 em, h2 em {
     radial-gradient(90% 70% at 0% 100%, var(--blue-50) 0%, rgba(238, 245, 253, 0) 60%),
     var(--paper);
 }
-.about-grid { display: grid; gap: 44px; align-items: center; }
+.about-copy { max-width: 66ch; margin-inline: auto; text-align: center; font-size: 1.04rem; }
+.about-copy p + p { margin-top: 1.1em; }
 
-.about-visual { position: relative; }
-.about-frame {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: var(--r-xl) 150px var(--r-xl) 150px;
-  background: linear-gradient(150deg, var(--blue-500) 0%, var(--navy-700) 58%, var(--navy-900) 100%);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
-}
-.about-frame picture, .about-frame img { width: 100%; height: 100%; }
-.about-frame img { object-fit: cover; object-position: 50% 8%; }
-.about-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(200deg, rgba(6, 23, 41, .2) 0%, rgba(6, 23, 41, 0) 45%, rgba(6, 23, 41, .3) 100%);
-  pointer-events: none;
-}
-.about-badge {
-  position: absolute;
-  right: 12px;
-  bottom: -20px;
+.about-points { display: grid; gap: 18px; margin: 42px auto 0; max-width: 980px; }
+.about-points li {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 15px 20px;
+  gap: 13px;
+  align-items: flex-start;
+  padding: 22px 22px 24px;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--r-md);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-sm);
 }
-.about-badge strong {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 3px;
-  color: var(--navy-800);
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 600;
-  line-height: 1;
-}
-.about-badge strong span { color: #f5b53d; font-size: .95rem; }
-.about-badge > span { font-size: .78rem; line-height: 1.4; color: var(--muted); }
-
-.about-copy h2 { margin-bottom: 18px; }
-.about-points { display: grid; gap: 14px; margin: 28px 0 30px; }
-.about-points li { display: flex; gap: 13px; align-items: flex-start; }
 .about-points li > span {
   display: grid;
   place-items: center;
@@ -590,8 +556,10 @@ h1 em, h2 em {
   color: var(--navy-700);
 }
 .about-points li > span svg { width: 15px; height: 15px; }
-.about-points strong { display: block; color: var(--ink); font-size: .97rem; }
+.about-points strong { display: block; margin-bottom: 2px; color: var(--ink); font-size: .97rem; }
 .about-points div { font-size: .91rem; line-height: 1.6; }
+
+.about-cta { margin-top: 36px; text-align: center; }
 
 /* 07. Diferenciais ------------------------------------------------------- */
 .benefits { background: var(--white); }
@@ -678,11 +646,11 @@ h1 em, h2 em {
 .testimonial footer strong { color: var(--white); font-size: .95rem; }
 .testimonial footer span { color: var(--blue-300); font-size: .8rem; }
 
-/* 09. Contato e formulário ----------------------------------------------- */
+/* 09. Contato ------------------------------------------------------------ */
 .contact { background: var(--paper); }
 .contact-grid { display: grid; gap: 30px; align-items: start; }
 
-.info-list { display: grid; gap: 22px; margin-bottom: 28px; }
+.info-list { display: grid; gap: 22px; margin-bottom: 26px; }
 .info-list li { display: flex; gap: 15px; }
 .info-ico {
   display: grid;
@@ -698,10 +666,9 @@ h1 em, h2 em {
 }
 .info-ico svg { width: 22px; height: 22px; }
 .info-list strong { display: block; margin-bottom: 3px; color: var(--ink); font-size: .84rem; letter-spacing: .05em; text-transform: uppercase; }
-.info-list address, .info-list .info-strong { display: block; font-size: 1rem; line-height: 1.55; color: var(--navy-800); }
+.info-list address, .info-list .info-strong { display: block; font-size: 1.02rem; line-height: 1.55; color: var(--navy-800); }
 a.info-strong { font-weight: 600; }
 a.info-strong:hover { color: var(--blue-600); }
-.info-placeholder { color: var(--body); }
 .info-list small { display: block; margin-top: 3px; font-size: .78rem; color: var(--muted); }
 .info-list .link-arrow { margin-top: 7px; }
 
@@ -714,79 +681,12 @@ a.info-strong:hover { color: var(--blue-600); }
 }
 .map-wrap iframe {
   width: 100%;
-  height: 300px;
+  height: 320px;
   border: 0;
   filter: grayscale(.28) contrast(1.02);
   transition: filter .4s var(--ease);
 }
 .map-wrap:hover iframe { filter: none; }
-
-.form-card {
-  padding: 30px 24px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-lg);
-}
-.form-card h3 { font-size: 1.44rem; }
-.form-intro { margin: 8px 0 22px; font-size: .9rem; color: var(--muted); }
-.form { display: grid; gap: 16px; }
-.field-row { display: grid; gap: 16px; }
-.field { display: grid; gap: 7px; }
-.field label { color: var(--ink); font-size: .87rem; font-weight: 600; }
-.field label small { font-weight: 400; color: var(--muted); }
-.field label span { color: var(--blue-600); }
-
-.field input, .field select, .field textarea {
-  width: 100%;
-  padding: 13px 15px;
-  background: var(--paper);
-  border: 1px solid var(--line-strong);
-  border-radius: var(--r-sm);
-  color: var(--ink);
-  font-family: inherit;
-  font-size: .95rem;
-  transition: border-color .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
-}
-.field textarea { resize: vertical; min-height: 104px; }
-.field input::placeholder, .field textarea::placeholder { color: #9fb1c1; }
-.field input:focus, .field select:focus, .field textarea:focus {
-  outline: none;
-  background: var(--white);
-  border-color: var(--blue-500);
-  box-shadow: 0 0 0 4px rgba(46, 134, 201, .15);
-}
-.field select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234d6274' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 13px center;
-  background-size: 17px;
-  padding-right: 40px;
-}
-.field.has-error input, .field.has-error select, .field.has-error textarea { border-color: #d2504a; box-shadow: 0 0 0 4px rgba(210, 80, 74, .12); }
-.error { margin: 0; color: #c0423c; font-size: .8rem; font-weight: 500; }
-
-.field-check {
-  grid-template-columns: auto 1fr;
-  align-items: start;
-  gap: 10px;
-  margin-top: 2px;
-}
-.field-check input {
-  width: 19px;
-  height: 19px;
-  margin-top: 3px;
-  padding: 0;
-  accent-color: var(--blue-600);
-  cursor: pointer;
-}
-.field-check label { font-size: .85rem; font-weight: 400; line-height: 1.5; color: var(--body); cursor: pointer; }
-.field-check .error { grid-column: 1 / -1; }
-
-.form-note { margin: 4px 0 0; font-size: .82rem; line-height: 1.5; color: var(--muted); text-align: center; }
-.form-note.is-error { color: #c0423c; font-weight: 500; }
-.form-note.is-success { color: var(--whats-dark); font-weight: 600; }
 
 /* 10. CTA final e rodapé ------------------------------------------------- */
 .cta-final {
@@ -913,8 +813,6 @@ a.info-strong:hover { color: var(--blue-600); }
 @media (min-width: 600px) {
   :root { --gutter: 28px; }
   .section { padding: 88px 0; }
-  .field-row { grid-template-columns: 1fr 1fr; }
-  .form-card { padding: 38px 34px; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .smile-grid { grid-template-columns: repeat(2, 1fr); }
   .benefit-grid { grid-template-columns: repeat(2, 1fr); }
@@ -938,11 +836,11 @@ a.info-strong:hover { color: var(--blue-600); }
   .hero-grid { grid-template-columns: 1.02fr .98fr; align-items: center; gap: 54px; }
   .hero-actions .btn { flex: 0 1 auto; }
   .hero-trust { gap: 22px; }
-  .about-grid { grid-template-columns: .92fr 1.08fr; gap: 60px; }
-  .contact-grid { grid-template-columns: 1.02fr .98fr; gap: 44px; }
+  .about-points { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .contact-grid { grid-template-columns: .9fr 1.1fr; gap: 44px; align-items: center; }
   .testimonial-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .smile-grid { gap: 24px; }
-  .map-wrap iframe { height: 330px; }
+  .map-wrap iframe { height: 420px; }
   .footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; }
   .wa-float { right: 26px; bottom: 26px; }
 }

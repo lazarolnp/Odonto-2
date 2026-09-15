@@ -9,7 +9,7 @@ os arquivos em qualquer hospedagem.
 ```
 index.html                  página única (todas as seções)
 assets/css/styles.css       folha de estilo única, mobile-first
-assets/js/main.js           interações (menu, animações, formulário)
+assets/js/main.js           interações (menu, animações, navegação)
 assets/img/                 fotos otimizadas (.webp com fallback .jpg) + favicon
 robots.txt, sitemap.xml     SEO
 ```
@@ -27,6 +27,9 @@ python3 -m http.server 8000
 
 Hero · Serviços · Sorrisos · Sobre · Diferenciais · Depoimentos · Contato · CTA final · Rodapé
 
+O agendamento acontece inteiramente pelo WhatsApp: não há formulário nem back-end.
+Todos os CTAs abrem uma conversa em `wa.me/5565996218598` com a mensagem já preenchida.
+
 ## Conteúdo: o que é verificado e o que é placeholder
 
 Nada de qualificação, especialidade, prêmio ou certificação foi inventado. As
@@ -40,6 +43,8 @@ informações abaixo vêm de fontes públicas:
 | Serviços | Lista fornecida pela cliente |
 | Fotos | Fornecidas pela cliente |
 
+Não há e-mail publicado no site — o canal de contato é o WhatsApp e o telefone.
+
 Os depoimentos são de **Fer Steinmetz**, **Diana Dalila** e **Bianca Barreto**,
 reproduzidos de forma concisa preservando o sentido original. Fonte:
 <https://dentmap.com.br/dentistas/cuiaba/dra-paula-viana-dentista-bairro-lixeira-cuiaba-sapt4omc>
@@ -48,8 +53,6 @@ reproduzidos de forma concisa preservando o sentido original. Fonte:
 
 Cada item abaixo está marcado com um comentário `TODO` no código:
 
-- [ ] **E-mail profissional** — hoje está o placeholder `contato@drapaulaviana.com.br`,
-      sinalizado como provisório na própria página (`index.html`, seção de contato).
 - [ ] **Domínio** — trocar `https://www.drapaulaviana.com.br/` nas tags `canonical`,
       `og:`, `twitter:`, no JSON-LD, no `robots.txt` e no `sitemap.xml`.
 - [ ] **CRO-MT** — número de registro não foi incluído por não estar confirmado.
@@ -67,15 +70,6 @@ trabalhos realizados — **não** como "antes e depois" e sem promessa de result
 Vale confirmar com a Dra. Paula se há autorização de uso de imagem assinada de cada
 paciente e se a seção está de acordo com as regras de publicidade odontológica do
 CFO, que restringem imagens de "antes e depois" e promessas de resultado.
-
-## Formulário de agendamento
-
-O formulário valida os campos no navegador e monta uma mensagem pronta no WhatsApp
-(`wa.me/5565996218598`), então funciona sem back-end.
-
-Para receber os pedidos também por e-mail, aponte o `action` do `<form>` para um
-serviço de formulário (Formspree, Basin, Netlify Forms) e remova o atributo
-`data-whatsapp-form` — o JS deixa de interceptar o envio.
 
 ## Acessibilidade e performance
 
