@@ -342,7 +342,7 @@ h1 em, h2 em {
 .hero-copy h1 { margin-bottom: 18px; }
 .hero-lead { max-width: 52ch; font-size: 1.08rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 34px; }
-.hero-actions .btn { flex: 1 1 auto; min-width: 210px; }
+.hero-actions .btn { flex: 0 1 auto; }
 
 .hero-trust {
   display: grid;
@@ -805,7 +805,6 @@ h1 em, h2 em {
   .nav { display: flex; align-items: center; gap: 30px; }
   .hero { padding: 62px 0 96px; }
   .hero-grid { grid-template-columns: 1.02fr .98fr; align-items: center; gap: 54px; }
-  .hero-actions .btn { flex: 0 1 auto; }
   .hero-trust { gap: 22px; }
   .about-points { grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .testimonial-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }

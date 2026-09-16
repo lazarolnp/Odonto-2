@@ -11,6 +11,7 @@
   var header = document.querySelector('[data-header]');
   var toggle = document.querySelector('[data-nav-toggle]');
   var nav = document.getElementById('menu-principal');
+  var floatBtn = document.querySelector('[data-wa-float]');
 
   function onScroll() {
     if (header) header.classList.toggle('is-stuck', window.scrollY > 8);
@@ -49,6 +50,7 @@
 
     window.addEventListener('resize', function () {
       if (window.innerWidth >= 900) closeNav();
+      toggleFloat();
     });
   }
 
@@ -89,10 +91,12 @@
   }
 
   /* --------------------------------------------- Botão flutuante WhatsApp */
-  var floatBtn = document.querySelector('[data-wa-float]');
   function toggleFloat() {
     if (!floatBtn) return;
-    floatBtn.classList.toggle('is-visible', window.scrollY > 520);
+    // No mobile o botão do cabeçalho fica dentro do menu hambúrguer, então o
+    // flutuante aparece desde o início — é o único contato à mão na primeira tela.
+    var sempreVisivel = window.innerWidth < 900;
+    floatBtn.classList.toggle('is-visible', sempreVisivel || window.scrollY > 520);
   }
 
   /* ------------------------------------------------------------ Rodapé */
