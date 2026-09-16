@@ -25,7 +25,10 @@ python3 -m http.server 8000
 
 ## Seções
 
-Hero · Serviços · Sorrisos · Sobre · Diferenciais · Depoimentos · Contato · CTA final · Rodapé
+Hero · Serviços · Sorrisos · Sobre · Diferenciais · Depoimentos · CTA final · Rodapé
+
+Não há seção de contato: endereço, rota, telefone e o botão de WhatsApp ficam no
+rodapé, que carrega o `id="contato"` usado pelos links "Contato" do menu.
 
 O agendamento acontece inteiramente pelo WhatsApp: não há formulário nem back-end.
 Todos os CTAs abrem uma conversa em `wa.me/5565996218598` com a mensagem já preenchida.
@@ -81,7 +84,8 @@ CFO, que restringem imagens de "antes e depois" e promessas de resultado.
 - Sem JavaScript o conteúdo continua visível: o estado inicial das animações é
   aplicado apenas quando o JS está ativo.
 - Imagens em `.webp` com fallback `.jpg`, dimensões declaradas (sem layout shift),
-  `loading="lazy"` abaixo da dobra e o mapa carregado de forma preguiçosa.
+  `loading="lazy"` abaixo da dobra. Sem mapa incorporado: o endereço leva ao
+  Google Maps por link, o que evita um iframe de terceiros no carregamento.
 - Zero dependências de runtime; só a fonte vem de fora (Google Fonts, carregada sem bloquear a renderização).
 
 ## SEO
